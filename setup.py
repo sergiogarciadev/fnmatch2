@@ -2,7 +2,7 @@
 
 from setuptools import setup, find_packages
 from setuptools.command.test import test as test_command
-from snakegen import __version__
+from fnmatch2 import __version__
 
 
 class PyTest(test_command):

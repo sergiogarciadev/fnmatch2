@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# from fnmatch2 import fnmatch2
-from fnmatch import fnmatch as fnmatch2
+from fnmatch2 import fnmatch2
 
 
 class TestFilenameMatch(object):
