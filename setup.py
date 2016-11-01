@@ -52,8 +52,8 @@ setup(
     install_requires=[],
     extras_require={
         'dev': [
-            'coveralls==1.1',
-            'pytest==3.0.3'
+            'coveralls>=1.1',
+            'pytest>=3.0.3'
         ]
     },
     tests_require=['pytest'],

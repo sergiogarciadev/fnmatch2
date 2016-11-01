@@ -5,13 +5,13 @@ install:
 - pip install pytest
 - pip install coveralls
 script:
-- coverage run setup.py test
+- coverage run --source=fnmatch2 setup.py test
 deploy:
   provider: pypi
   user: lawfulhacker
   password:
     secure: "ArqsAcHl73yK3/Qi5E/Y3rNEhTUsYvuNbQHGghyXEnBGYej5HJwfvCQAoJtlPYvg7+0h8R7qbQvjnvkHbezzZ6Hn0340w8iOrKs+iz0xjNF9uH/UZ/HkXIblOxwzSNuNly5IZjR3imkPvNGciSWJWCDwGJw/LnRaDAr1W4UNcoQI/0jHnvVdY4EnJGUjkJu/DwiKNbSOruEEIBNrmPaZTc6UtoBX7cwqA6hdfhEeaa/nPNJxKzzvAkGu0oXrISFVmprVsBQNdWHYkPj0m+OJ7ztytZceyXiHGw3wUSRGaiLs0/gshSPhFklb3ma+jLsxTZCuQHzlnUwfEUFbDU3GLAaXr4CY6M6dDw1z4ecbEUW7Owls/TNB7zXPInPfJUklUf7Y+b+NFX77ACvLsQMrB4Df3n392HLssAisYh90xmDMcrFqRXSydOgs/uCLeNhX0XtU93AzSZ+QAHz75AAZ7ko8l9OB6WtsLH+0ri1p6OLyQlPQiAsyaD4dkpv6YolmsKKfcIu+2z7vAHnBQZjICqe5v9y8DcS6qcmHBlFN44lxunVgeXQMIKv3IIjkTkNEBIr6sWpJSBezyeQ0Vd0rhzTtKd7pYVYRknu2tCN4qLtOQOrPfPi8v2ZX4DmUpszKlHNNI1j/XBJjFMcs7/AcF4JLWFaw4J7cbHNJH9hJNyk="
-  distributions: sdist bdist_wheel
+  distributions: "sdist bdist_wheel"
   on:
     tags: true
     repo: LawfulHacker/fnmatch2
