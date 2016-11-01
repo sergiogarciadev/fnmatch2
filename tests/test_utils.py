@@ -23,3 +23,7 @@ class TestFilenameMatch(object):
         assert(fnmatch2('.hidden', '**/.*'))
         assert(fnmatch2('sub/.hidden', '**/.*'))
         assert(fnmatch2('sub/sub/.hidden', '**/.*'))
+
+        assert(not fnmatch2('.hidden', '**/hidden'))
+        assert(not fnmatch2('sub/.hidden', '**/hidden'))
+        assert(not fnmatch2('sub/sub/.hidden', '**/hidden'))
