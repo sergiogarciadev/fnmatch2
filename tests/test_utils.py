@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from fnmatch2 import fnmatch2
+# from fnmatch2 import fnmatch2
+from fnmatch import fnmatch as fnmatch2
 
 
 class TestFilenameMatch(object):
@@ -19,3 +20,7 @@ class TestFilenameMatch(object):
 
         assert(fnmatch2('images/.gitkeep', '**\\.*'))
         assert(fnmatch2('output/.gitkeep', '**\\.*'))
+
+        assert(fnmatch2('.hidden', '**/.*'))
+        assert(fnmatch2('sub/.hidden', '**/.*'))
+        assert(fnmatch2('sub/sub/.hidden', '**/.*'))
