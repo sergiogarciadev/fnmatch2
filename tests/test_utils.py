@@ -9,9 +9,6 @@ class TestFilenameMatch(object):
         assert(fnmatch2('site.yml', 'site.yml'))
         assert(fnmatch2('site.yml', '**/site.yml'))
 
-        assert(fnmatch2('SITE.YML', 'site.yml'))
-        assert(fnmatch2('SITE.YML', '**/site.yml'))
-
         assert(fnmatch2('images/logo.png', '*/*.png'))
         assert(not fnmatch2('images/images/logo.png', '*/*.png'))
         assert(not fnmatch2('images/logo.png', '*/*/*.png'))
